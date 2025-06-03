@@ -1,0 +1,52 @@
+{
+	"name": "actor-InterruptActionTrigger",
+	"version": "0.5.0",
+	"description": "Triggers an action from an input interrupt",
+	"keywords": "Fabrica-IO, actor, trigger",
+	"repository":
+	{
+	  "type": "git",
+	  "url": "https://github.com/FabricaIO/actor-InterruptActionTrigger.git"
+	},
+	"authors":
+	[
+	  {
+		"name": "Sam Groveman",
+		"email": "SamGroveman@outlook.com",
+		"url": "https://github.com/FabricaIO"
+	  }
+	],
+	"dependencies": {
+		"Action Trigger": "https://github.com/FabricaIO/util-ActionTrigger.git",
+		"DigitalInputTrigger": "https://github.com/FabricaIO/util-DigitalInputTrigger.git"
+	  },
+	"license": "GPLv3",
+	"homepage": "https://github.com/FabricaIO",
+	"frameworks": "arduino",
+	"platforms": "*",
+	"fabrica-io" : {
+		"name": "InterruptTrigger",
+		"type": 1,
+		"category": "Trigger",
+		"libname": "InterruptActionTrigger",
+		"includes": ["InterruptActionTrigger"],
+		"description": "Triggers an action from an input interrupt",
+		"constructor":
+		[
+			[
+				{
+					"name": "Pin",
+					"type": "int",
+					"description": "The pin to use",
+					"default": ""
+				},
+				{
+					"name": "Configfile",
+					"type": "String",
+					"description": "The file name to store settings in",
+					"default": "InterruptTrigger.json"
+				}
+			]
+		]
+	}
+  }
