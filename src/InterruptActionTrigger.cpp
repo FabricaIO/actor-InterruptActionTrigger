@@ -90,7 +90,6 @@ bool InterruptActionTrigger::setConfig(String config, bool save) {
 			Logger.println(error.f_str());
 			return false;
 		}
-		// Assign loaded values
 		
 		// Get new name
 		String newName = doc["Name"].as<String>();
@@ -98,7 +97,7 @@ bool InterruptActionTrigger::setConfig(String config, bool save) {
 		// Update name and task if changed
 		if (newName != Description.name) {
 			Description.name = newName;
-			if (!updateTaskName()) {
+			if (triggerProcessorTask != nullptr && !updateTaskName()) {
 				Logger.println("Failed to update task name");
 				return false;
 			}
