@@ -24,7 +24,7 @@
 	"homepage": "https://github.com/FabricaIO",
 	"frameworks": "arduino",
 	"platforms": "*",
-	"fabrica-io" : {
+	"fabricaio" : {
 		"name": "InterruptTrigger",
 		"type": 1,
 		"category": "Trigger",
