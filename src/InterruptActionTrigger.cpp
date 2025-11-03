@@ -14,7 +14,6 @@ InterruptActionTrigger::InterruptActionTrigger(String Name, int Pin, String conf
 /// @return True on success
 bool InterruptActionTrigger::begin() {
 	// Set description
-	Description.actionQuantity = 1;
 	Description.type = "trigger";
 	Description.actions = {{"triggeraction", 0}};
 	actionTrigger.actions_config.Enabled = true;
