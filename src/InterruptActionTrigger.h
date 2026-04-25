@@ -14,7 +14,7 @@
 #include <ActionTrigger.h>
 #include <DigitalInputTrigger.h>
 
-/// @brief Class providing action triggers at regular intervals
+/// @brief Class providing action triggers from an input interrupt
 class InterruptActionTrigger : public Actor, public DigitalInputTrigger {
 	protected:
 		/// @brief Output configuration

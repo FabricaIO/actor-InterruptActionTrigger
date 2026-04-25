@@ -2,7 +2,7 @@
 
 extern bool POSTSuccess;
 
-/// @brief Creates a periodic action trigger
+/// @brief Creates an interrupt action trigger
 /// @param Name The device name
 /// @param Pin Pin to use
 /// @param configFile Name of the config file to use
@@ -10,7 +10,7 @@ InterruptActionTrigger::InterruptActionTrigger(String Name, int Pin, String conf
 	config_path = "/settings/act/" + configFile;
 }
 
-/// @brief Starts a periodic trigger 
+/// @brief Starts an interrupt action trigger 
 /// @return True on success
 bool InterruptActionTrigger::begin() {
 	// Set description
