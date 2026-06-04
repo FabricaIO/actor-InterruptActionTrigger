@@ -45,7 +45,7 @@ bool InterruptActionTrigger::begin() {
 /// @param action The action to process (only option is 0 for set output)
 /// @param payload Any payload to be passed to the action
 /// @return JSON response with OK
-std::tuple<bool, String> InterruptActionTrigger::receiveAction(int action, String payload) {
+std::pair<bool, String> InterruptActionTrigger::receiveAction(const int action, const String& payload) {
 	if (action == 0) {
 		if (triggerAction(payload)) {
 			return { true, R"({"success": true})" };
